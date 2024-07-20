@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonah Saffran Studio - Distraction and Impermanence</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            background: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: none; /* Ensure no bottom border */
+            box-shadow: none; /* Remove any shadow */
+        }
+        nav a {
+            padding: 14px 20px;
+            text-decoration: none;
+            color: black;
+            font-size: 0.9em;
+            border: none; /* Remove any default border */
+            outline: none; /* Remove any default outline */
+        }
+        main {
+            margin-top: 60px; /* Offset for fixed nav */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: left;
+            flex-grow: 1;
+        }
+        .slideshow-container {
+            width: 76%; /* Width of slideshow */
+            max-width: 1150px; /* Maximum width */
+            position: relative;
+            margin-bottom: 100px; /* Adjust space below the slideshow */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            min-height: 80vh; /* Ensure container takes up enough vertical space */
+        }
+        .mySlides {
+            display: none;
+        }
+        .mySlides img {
+            width: 100%; /* Ensure image scales with container width */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Ensure images are block-level elements */
+            object-fit: cover; /* Cover the area of the slideshow container */
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 8px; /* Thinner padding */
+            color: rgba(0, 0, 0, 0.5); /* Semi-transparent color */
+            font-weight: 100; /* Thinner font weight */
+            font-size: 24px; /* Adjusted font size for thinner arrows */
+            user-select: none;
+            background: none;
+            border: none;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+        .prev {
+            left: -60px; /* Move left arrow further out */
+        }
+        .next {
+            right: -60px; /* Move right arrow further out */
+        }
+        .description {
+            max-width: 800px;
+            font-size: 1em;
+            line-height: 1.6;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left; /* Align text to the left */
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.5em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .slideshow-container {
+                width: 90%;
+            }
+            .description {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <main>
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="https://live.staticflickr.com/65535/53868961356_7547a7c606_k.jpg" width="2048" height="819" alt="Untitled-3"/>
+            </div>
+            <div class="mySlides">
+                <img src="https://live.staticflickr.com/65535/53868055972_1575030067_k.jpg" width="2048" height="819" alt="Untitled-2"/>
+            </div>
+            <div class="mySlides">
+                <img src="https://live.staticflickr.com/65535/53869372280_51b895edae_k.jpg" width="2048" height="819" alt="Untitled2"/>
+            </div>
+            <div class="mySlides">
+                <img src="https://live.staticflickr.com/65535/53869150986_6c5b39425d_k.jpg" width="2048" height="819" alt="Untitled-1"/>
+            </div>
+            <div class="mySlides">
+                <img src="https://live.staticflickr.com/65535/53869163891_1fafd83754_k.jpg" width="2048" height="819" alt="Untitled-11"/>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="description">
+            <p>Starting this year, I staged diptychs of young people using iPhones in natural scenes around California's Central Coast. I was interested in thinking about the juxtaposition of technology with the California landscape, on Native Awaswas land. Each diptych consists of a scene with people and then a portrait of the same landscape without them. The second picture is a portrait of the landscape as someone would make a portrait of a person. I found it important to imagine the land as a necessary character in the work as opposed to just the background of an image. This landscape is one that has seen generations of people come and go.</p>
+            <p>I didn’t want to push the viewer to think about only one narrative. My goal was to create the picture, put a realistic scene in front of the audience, and allow the audience to come to their own conclusions. I’m researching themes of distraction, impermanence, and western influence on Native land. These are difficult ideas and rather than come forward with what I believed was a solution, I rather aimed to raise questions that created the space for interesting and productive dialogue around the topics.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Jonah Saffran Studio. All rights reserved.</p>
+    </footer>
+    <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+    </script>
+</body>
+</html>
