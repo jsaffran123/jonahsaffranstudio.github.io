@@ -15,12 +15,12 @@
             flex-direction: column;
             min-height: 100vh;
             overflow-x: hidden;
-            text-align: left; /* Align text to the left */
-            line-height: 1.6; /* Improve readability */
-            padding: 20px; /* Padding around the text */
+            justify-content: center;
+            align-items: center;
         }
         nav {
             display: flex;
+            justify-content: space-between;
             align-items: center;
             padding: 15px 20px;
             background: white;
@@ -30,25 +30,15 @@
             z-index: 1000;
             border-bottom: none;
             box-shadow: none;
-            box-sizing: border-box;
-        }
-        .nav-wrapper {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
         }
         nav .logo {
             font-size: 1.2em;
             font-weight: normal;
-            position: absolute;
-            left: 20px;
+            margin-right: auto;
         }
         nav div {
             display: flex;
             gap: 10px;
-            margin-left: auto;
         }
         nav a {
             padding: 14px 20px;
@@ -58,47 +48,53 @@
             border: none;
             outline: none;
         }
-        nav a:hover {
-            color: black;
-        }
         main {
-            margin-top: 60px;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center text */
+            align-items: center;
             justify-content: center;
+            text-align: center;
             padding: 20px;
-            text-align: center; /* Center text */
             flex-grow: 1;
+        }
+        a {
+            text-decoration: none;
+            color: inherit; /* Inherit color from parent */
+            font-size: 1em;
+            padding: 14px 20px;
+        }
+        a:hover, a:focus {
+            color: inherit; /* Maintain the same color on hover and focus */
         }
         footer {
             text-align: center;
             padding: 10px 0;
             font-size: 0.5em;
-            margin-top: auto;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
-        a.no-style {
-            text-decoration: none; /* Remove underline */
-            color: black; /* Remove blue color */
-        }
-        a.no-style:hover {
-            color: black; /* Ensure color doesn't change on hover */
+        @media (max-width: 768px) {
+            nav {
+                padding: 10px 15px;
+            }
+            nav a {
+                font-size: 0.8em;
+            }
         }
     </style>
 </head>
 <body>
     <nav>
         <a href="index.html" class="logo">Jonah Saffran</a>
-        <div class="nav-wrapper">
-            <div>
-                <a href="work.html">Work</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
+        <div>
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </div>
     </nav>
     <main>
-        <a href="distraction.html" class="no-style">Distraction and Impermanence to Someone Born 7 Years After the Invention of the iPhone</a>
+        <a href="distraction.html">Distraction and Impermanence to Someone Born 7 Years After the Invention of the iPhone</a>
     </main>
     <footer>
         <p>&copy; 2024 Jonah Saffran Studio. All rights reserved.</p>
