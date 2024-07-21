@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonah Saffran Studio - About</title>
+    <title>Jonah Saffran Studio - Contact</title>
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
@@ -15,12 +15,12 @@
             flex-direction: column;
             min-height: 100vh;
             overflow-x: hidden;
-            text-align: left; /* Align text to the left */
-            line-height: 1.6; /* Improve readability */
-            padding: 20px; /* Padding around the text */
+            justify-content: center;
+            align-items: center;
         }
         nav {
             display: flex;
+            justify-content: space-between;
             align-items: center;
             padding: 15px 20px;
             background: white;
@@ -30,25 +30,15 @@
             z-index: 1000;
             border-bottom: none;
             box-shadow: none;
-            box-sizing: border-box;
-        }
-        .nav-wrapper {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
         }
         nav .logo {
             font-size: 1.2em;
             font-weight: normal;
-            position: absolute;
-            left: 20px;
+            margin-right: auto;
         }
         nav div {
             display: flex;
             gap: 10px;
-            margin-left: auto;
         }
         nav a {
             padding: 14px 20px;
@@ -58,24 +48,27 @@
             border: none;
             outline: none;
         }
-        nav a:hover {
-            color: black;
-        }
         main {
-            margin-top: 60px;
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Align text to the left */
+            align-items: center;
             justify-content: center;
+            text-align: center;
             padding: 20px;
-            text-align: left; /* Align text to the left */
             flex-grow: 1;
+        }
+        .content {
+            text-align: left;
+            font-size: 0.9em;
+            padding: 0 20px;
         }
         footer {
             text-align: center;
             padding: 10px 0;
             font-size: 0.5em;
-            margin-top: auto;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
         @media (max-width: 768px) {
             nav {
@@ -84,22 +77,26 @@
             nav a {
                 font-size: 0.8em;
             }
+            .content {
+                font-size: 0.8em;
+                padding: 0 10px;
+            }
         }
     </style>
 </head>
 <body>
     <nav>
         <a href="index.html" class="logo">Jonah Saffran</a>
-        <div class="nav-wrapper">
-            <div>
-                <a href="work.html">Work</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
+        <div>
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </div>
     </nav>
     <main>
-        <p>Jonah Saffran is a practicing artist and student born and raised in Columbia, Missouri, based now in the San Francisco area.</p>
+        <div class="content">
+            <p>jonahsaffran@gmail.com</p>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 Jonah Saffran Studio. All rights reserved.</p>
