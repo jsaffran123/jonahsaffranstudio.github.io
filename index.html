@@ -36,14 +36,14 @@
             outline: none;
         }
         .title {
-            margin-top: 200px; /* Significantly increase margin to move title further from the menu */
+            margin-top: 200px;
             text-align: center;
             font-size: 1.2em;
             padding: 10px;
             font-style: italic;
         }
         main {
-            margin-top: 40px; /* Slightly decrease margin to move content closer to the title */
+            margin-top: 40px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -51,8 +51,8 @@
             flex-grow: 1;
         }
         .slideshow-container {
-            width: 100%; /* Full width of the viewport */
-            max-width: 1200px; /* Maximum width for larger screens */
+            width: 100%;
+            max-width: 1200px;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -61,30 +61,30 @@
         }
         .slideshow-container img {
             display: block;
-            margin: 40px 0; /* Increased spacing between images */
-            width: 100%; /* Scale image to fit container width */
-            height: auto; /* Maintain aspect ratio */
+            margin: 40px 0;
+            width: 100%;
+            height: auto;
         }
         .description {
             font-size: 1em;
             line-height: 1.6;
             padding: 10px;
-            background-color: white; /* Ensure text background is white for readability */
+            background-color: white;
             position: relative;
         }
         .description-left {
-            text-align: left; /* Align text to the left */
-            max-width: 50%; /* Limit width to 50% of the page */
-            margin-left: 0; /* Reset margin */
-            margin-right: auto; /* Allow space on the right side */
+            text-align: left;
+            max-width: 50%;
+            margin-left: 0;
+            margin-right: auto;
         }
         .description-first {
-            margin-left: 50%; /* Start text at 50% of the page width */
-            margin-right: 0; /* Remove right margin */
+            margin-left: 50%;
+            margin-right: 0;
         }
         .description-second {
-            margin-left: 0; /* Start text at 0% */
-            margin-right: auto; /* Allow space on the right side */
+            margin-left: 0;
+            margin-right: auto;
         }
         footer {
             text-align: center;
@@ -94,12 +94,8 @@
             border-top: 1px solid #eaeaea;
         }
         @media (max-width: 768px) {
-            .title {
-                margin-top: 120px; /* Reduce margin for smaller screens */
-                font-size: 1em; /* Adjust font size for smaller screens */
-            }
             .slideshow-container {
-                width: 95%; /* Slightly smaller on mobile */
+                width: 95%;
             }
             .description {
                 font-size: 0.9em;
@@ -107,7 +103,6 @@
             .description-left {
                 margin-left: 0;
                 margin-right: 0;
-                max-width: 100%; /* Make the description full width on smaller screens */
             }
         }
     </style>
@@ -136,6 +131,9 @@
         </div>
         <footer>
             <p>&copy; 2024 Jonah Saffran Studio. All rights reserved.</p>
+            <a href="https://www.instagram.com/jonahsaffran/">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; height: 24px;">
+            </a>
         </footer>
     </main>
 </body>
