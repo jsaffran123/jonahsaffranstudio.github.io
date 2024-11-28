@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonah Saffran Studio - Work</title>
+    <title>Jonah Saffran Studio</title>
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
@@ -36,55 +36,35 @@
             outline: none;
         }
         .title {
-            margin-top: 200px; /* Significantly increase margin to move title further from the menu */
+            margin-top: 200px; /* Move title further from menu */
             text-align: center;
             font-size: 1.2em;
             padding: 10px;
             font-style: italic;
         }
         main {
-            margin-top: 40px; /* Slightly decrease margin to move content closer to the title */
             display: flex;
             flex-direction: column;
-            align-items: center;
-            padding: 20px;
+            justify-content: center; /* Vertically center the content */
+            align-items: center;    /* Horizontally center the content */
             flex-grow: 1;
+            padding: 20px;
         }
-        .slideshow-container {
-            width: 100%; /* Full width of the viewport */
-            max-width: 1200px; /* Maximum width for larger screens */
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            overflow: hidden;
+        .link {
+            text-align: center;
         }
-        .slideshow-container img {
-            display: block;
-            margin: 40px 0; /* Increased spacing between images */
-            width: 100%; /* Scale image to fit container width */
-            height: auto; /* Maintain aspect ratio */
+        .link a {
+            font-size: 1.1em; /* Font size for the links */
+            font-style: italic; /* Italicized text */
+            text-decoration: none; /* No underline */
+            color: black; /* Link color */
         }
-        .description {
-            font-size: 1em;
-            line-height: 1.6;
-            padding: 10px;
-            background-color: white; /* Ensure text background is white for readability */
-            position: relative;
+        .link a:hover {
+            color: black; /* No color change on hover */
+            text-decoration: none; /* No underline on hover */
         }
-        .description-left {
-            text-align: left; /* Align text to the left */
-            max-width: 50%; /* Limit width to 50% of the page */
-            margin-left: 0; /* Reset margin */
-            margin-right: auto; /* Allow space on the right side */
-        }
-        .description-first {
-            margin-left: 50%; /* Start text at 50% of the page width */
-            margin-right: 0; /* Remove right margin */
-        }
-        .description-second {
-            margin-left: 0; /* Start text at 0% */
-            margin-right: auto; /* Allow space on the right side */
+        .link:first-of-type {
+            margin-bottom: 20px; /* Add space below the first link */
         }
         footer {
             text-align: center;
@@ -93,51 +73,32 @@
             width: 100%;
             border-top: 1px solid #eaeaea;
         }
-        @media (max-width: 768px) {
-            .slideshow-container {
-                width: 95%; /* Slightly smaller on mobile */
-            }
-            .description {
-                font-size: 0.9em;
-                width: 95%; /* Full width of the container with margins */
-                margin: 0 auto; /* Center the description */
-            }
-            .description-left {
-                max-width: 100%; /* Full width on mobile */
-                margin-left: 0;
-                margin-right: 0;
-            }
-        }
     </style>
 </head>
 <body>
+    <!-- Navigation bar with Work and Jonah links -->
     <nav>
         <a href="index.html">Work</a>
         <a href="jonah.html">Jonah</a>
     </nav>
-    <div class="title">
-        Distraction and Impermanence to Someone Born 7 Years After the Invention of the iPhone
-    </div>
+
     <main>
-        <div class="slideshow-container">
-            <img src="https://live.staticflickr.com/65535/53868961356_7547a7c606_k.jpg" alt="Untitled-3"/>
-            <img src="https://live.staticflickr.com/65535/53868055972_1575030067_k.jpg" alt="Untitled-2"/>
-            <div class="description description-left description-first">
-                <p>Starting this year, I staged diptychs of young people using iPhones in natural scenes around California's Central Coast. I was interested in thinking about the juxtaposition of technology with the California landscape, on Native Awaswas land. Each diptych consists of a scene with people and then a portrait of the same landscape without them. The second picture is a portrait of the landscape as someone would make a portrait of a person. I found it important to imagine the land as a necessary character in the work as opposed to just the background of an image. This landscape is one that has seen generations of people come and go.</p>
-            </div>
-            <img src="https://live.staticflickr.com/65535/53869163891_1fafd83754_k.jpg" alt="Untitled-11"/>
-            <img src="https://live.staticflickr.com/65535/53869150986_6c5b39425d_k.jpg" alt="Untitled-1"/>
-            <div class="description description-left description-second">
-                <p>The work explores themes of technology and landscape, showing how our interactions with the environment evolve. The juxtaposition of human presence and natural settings highlights the changing dynamics between technology and nature. By capturing both the people and the landscape, the project aims to provoke thought about our relationship with the environment and the impact of technological advancements on our perception of nature.</p>
-            </div>
-            <img src="https://live.staticflickr.com/65535/53869372280_51b895edae_k.jpg" alt="Untitled2"/>
+        <!-- First link (Three Whiskeys into the Snowstorm) -->
+        <div class="link">
+            <a href="tws.html">Three Whiskeys into the Snowstorm (My Mother's Garden Exhibition)</a>
         </div>
-        <footer>
-            <a href="https://www.instagram.com/jonahsaffran/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; height: 24px;">
-            </a>
-            <p>&copy; 2024 Jonah Saffran Studio. All rights reserved.</p>
-        </footer>
+
+        <!-- Second link (Distraction and Impermanence) -->
+        <div class="link">
+            <a href="work.html">Distraction and Impermanence to Someone Born 7 Years After the Invention of the iPhone</a>
+        </div>
     </main>
+
+    <footer>
+        <a href="https://www.instagram.com/jonahsaffran/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; height: 24px;">
+        </a>
+        <p>&copy; 2024 Jonah Saffran Studio. All rights reserved.</p>
+    </footer>
 </body>
 </html>
