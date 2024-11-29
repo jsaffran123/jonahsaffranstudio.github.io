@@ -44,7 +44,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
+            padding: 0; /* Remove padding to ensure full-width slideshow */
             flex-grow: 1;
             width: 100%;
             overflow: hidden;
@@ -52,64 +52,58 @@
 
         /* Slideshow container */
         .slideshow-container {
-            width: 90%; /* Reduced width to fit on screen */
+            width: 100%; /* Make slideshow container take up full width */
             height: 80vh; /* Adjust height */
             display: flex;
             flex-direction: row;
             align-items: center;
             overflow-x: scroll; /* Allow horizontal scrolling */
             overflow-y: hidden; /* Prevent vertical scrolling */
-            padding: 0;
             box-sizing: border-box;
             justify-content: flex-start;
             margin-top: 20px; /* Adjusted margin-top to move the slideshow lower */
-            scroll-snap-type: none; /* Removed snapping */
+            padding: 0; /* Remove padding around the container */
         }
 
         /* Image styles */
         .slideshow-container img {
             display: block;
-            margin: 0 50px; /* Increased space between images */
-            width: 100%; /* Make images fill the container */
+            width: 100%; /* Set image width to fill the container */
             max-width: 500px; /* Limit width to make images smaller */
+            margin: 0 50px; /* Space between images */
             object-fit: contain; /* Ensure images maintain aspect ratio */
+            border: none; /* Remove any border around images */
         }
 
-        /* Larger Images */
-        .large-size {
-            max-width: 700px; /* Increased max-width for larger images */
+        /* Return image 1 and image 2 to their original size */
+        #image1, #image2 {
+            max-width: 500px; /* Original size from your initial code */
         }
 
-        /* Image classes for specific larger images */
-        .image2 {
-            max-width: 1000px; /* Significantly increase image 2's size */
+        /* Adjust image 7 to match original size (same as image 8) */
+        #image7 {
+            max-width: 500px; /* Reset to original size */
         }
 
-        .image3, .image4, .image6, .image10, .image11 {
-            max-width: 700px; /* Increase size for these images */
+        /* Increase the size of image 5 */
+        #image5 {
+            max-width: 1000px; /* Increase size of image 5 */
+        }
+
+        /* New adjustment for the image without the ID */
+        .flickr-image {
+            max-width: 800px; /* Increase the size of this image */
+        }
+
+        /* Slightly smaller last image */
+        #image11 {
+            max-width: 900px; /* Slightly smaller than before */
         }
 
         footer {
             display: none; /* Remove footer */
         }
 
-        /* Force the Flickr image to a larger size */
-        .flickr-image {
-            width: 1000px !important; /* Enforcing explicit width */
-            height: auto !important; /* Maintain aspect ratio */
-            object-fit: contain; /* Ensure image maintains aspect ratio */
-            max-width: none !important; /* Remove max-width constraint */
-        }
-
-        /* Ensure image 5 size is applied to the new image */
-        .image5-size {
-            max-width: 700px; /* Matching the size of image 5 */
-        }
-
-        /* Increase the size of the last image */
-        .last-image-size {
-            max-width: 700px !important; /* Same as other images */
-        }
     </style>
 </head>
 <body>
@@ -125,18 +119,18 @@
         <div class="slideshow-container">
             <!-- Image Links - Updated to display images without clickable links -->
             <img id="image1" src="https://live.staticflickr.com/65535/54170817900_8ea550e14a_k.jpg" alt="TouchedUpClayFinal"/>
-            <img id="image8" class="image3" src="https://live.staticflickr.com/65535/54169487577_a31b71c47f_k.jpg" alt="Untitled-17"/>
+            <img id="image2" class="image3" src="https://live.staticflickr.com/65535/54169487577_a31b71c47f_k.jpg" alt="Untitled-17"/>
             <img id="image3" class="image8" src="https://live.staticflickr.com/65535/54170640503_eca8a67181_k.jpg" alt="img20240914_13463264"/>
-            <img id="image10" class="image11" src="https://live.staticflickr.com/65535/54170641803_2b42f74de2_k.jpg" alt="img20240808_19011804"/>
-            <img src="https://live.staticflickr.com/65535/54170927429_dd7c8356aa_k.jpg" alt="MyMothersGarden1 copy" class="flickr-image"/>
-            <img id="image4" src="https://live.staticflickr.com/65535/54170367451_c61117d41d_k.jpg" alt="img20240831_11344374"/>
-            <img id="image5" class="image6" src="https://live.staticflickr.com/65535/54170816295_6e8c331bae_k.jpg" alt="img20240831_11570671"/>
+            <img id="image4" class="image11" src="https://live.staticflickr.com/65535/54170641803_2b42f74de2_k.jpg" alt="img20240808_19011804"/>
+            <img id="image5" src="https://live.staticflickr.com/65535/54170927429_dd7c8356aa_k.jpg" alt="MyMothersGarden1 copy" class="flickr-image"/>
+            <img id="image6" src="https://live.staticflickr.com/65535/54170367451_c61117d41d_k.jpg" alt="img20240831_11344374"/>
+            <img id="image7" class="image6" src="https://live.staticflickr.com/65535/54170816295_6e8c331bae_k.jpg" alt="img20240831_11570671"/>
             <!-- New Image moved between image 5 and 7 -->
-            <img src="https://live.staticflickr.com/65535/54169486702_554d6554e4_k.jpg" alt="img20240831_12144702" class="image5-size"/>
-            <img id="image7" src="https://live.staticflickr.com/65535/54170820295_05e19a74a5_k.jpg" alt="img20240914_13323301"/>
-            <img id="image9" class="image10" src="https://live.staticflickr.com/65535/54169492882_785457c94a_k.jpg" alt="img20240914_14001228"/>
+            <img id="image8" src="https://live.staticflickr.com/65535/54169486702_554d6554e4_k.jpg" alt="img20240831_12144702"/>
+            <img id="image9" src="https://live.staticflickr.com/65535/54170820295_05e19a74a5_k.jpg" alt="img20240914_13323301"/>
+            <img id="image10" class="image10" src="https://live.staticflickr.com/65535/54169492882_785457c94a_k.jpg" alt="img20240914_14001228"/>
             <!-- Last image now enlarged -->
-            <img id="image2" class="flickr-image" src="https://live.staticflickr.com/65535/54170368216_5c47cc86c2_k.jpg" alt="collage"/>
+            <img id="image11" class="flickr-image" src="https://live.staticflickr.com/65535/54170368216_5c47cc86c2_k.jpg" alt="collage"/>
         </div>
     </main>
 

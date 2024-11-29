@@ -56,12 +56,19 @@
                 flex: 0 1 100%; /* Make image take up the full width of the screen in mobile view */
                 height: 50vh; /* Ensure the image takes up 50% of the viewport height on mobile */
                 background-size: cover;
+                background-position: center;
             }
 
             .right {
                 flex: 0 1 100%; /* Links take up the remaining 50% in mobile view */
                 height: 50vh; /* Links take up 50% of the height */
-                justify-content: flex-start; /* Align links at the top of the right section */
+                justify-content: center; /* Vertically center the links */
+                align-items: center; /* Center the links horizontally */
+            }
+
+            .right a {
+                font-size: 1.2em; /* Make the links larger on mobile */
+                margin-bottom: 15px; /* Less space between the links */
             }
         }
     </style>
