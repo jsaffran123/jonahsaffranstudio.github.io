@@ -6,99 +6,79 @@
     <title>Jonah Saffran Studio</title>
     <style>
         body {
-            font-family: 'Times New Roman', Times, serif;
             margin: 0;
             padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .left {
+            flex: 0 1 50%; /* The left side takes up exactly 50% of the screen width */
+            background-image: url('https://live.staticflickr.com/65535/54170640503_31e910a995_o.jpg');
+            background-size: cover; /* Ensure the image covers the full area */
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; /* The image takes up the full height of the viewport */
+        }
+
+        .right {
+            flex: 0 1 50%; /* The right side takes up the remaining 50% of the screen width */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center the content vertically */
+            align-items: center;
             background-color: white;
-            color: black;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            padding: 15px 0;
-            background: white;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #eaeaea;
-        }
-        nav a {
-            padding: 14px 20px;
-            text-decoration: none;
-            color: black;
-            font-size: 1em;
-            border: none;
-            outline: none;
-        }
-        .title {
-            margin-top: 200px; /* Move title further from menu */
-            text-align: center;
-            font-size: 1.2em;
-            padding: 10px;
-            font-style: italic;
-        }
-        main {
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* Vertically center the content */
-            align-items: center;    /* Horizontally center the content */
-            flex-grow: 1;
             padding: 20px;
+            overflow-y: auto;
         }
-        .link {
-            text-align: center;
+
+        .right a {
+            font-size: 0.8em; /* Smaller font size */
+            color: black;
+            text-decoration: none;
+            margin-bottom: 20px; /* Less space between the links */
+            font-weight: bold; /* Bold the links */
         }
-        .link a {
-            font-size: 1.1em; /* Font size for the links */
-            font-style: italic; /* Italicized text */
-            text-decoration: none; /* No underline */
-            color: black; /* Link color */
+
+        .right a:hover {
+            text-decoration: none; /* Remove underline on hover */
         }
-        .link a:hover {
-            color: black; /* No color change on hover */
-            text-decoration: none; /* No underline on hover */
-        }
-        .link:first-of-type {
-            margin-bottom: 20px; /* Add space below the first link */
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            font-size: 0.8em;
-            width: 100%;
-            border-top: 1px solid #eaeaea;
+
+        /* Mobile-Friendly Layout */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column; /* Stack the left and right sections vertically */
+            }
+
+            .left {
+                flex: 0 1 100%; /* Make image take up the full width of the screen in mobile view */
+                height: 50vh; /* Ensure the image takes up 50% of the viewport height on mobile */
+                background-size: cover;
+            }
+
+            .right {
+                flex: 0 1 100%; /* Links take up the remaining 50% in mobile view */
+                height: 50vh; /* Links take up 50% of the height */
+                justify-content: flex-start; /* Align links at the top of the right section */
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation bar with Work and Jonah links -->
-    <nav>
-        <a href="index.html">Work</a>
+
+    <!-- Main content -->
+    <div class="left"></div> <!-- Left side with background image -->
+
+    <div class="right">
+        <!-- Jonah link -->
         <a href="jonah.html">Jonah</a>
-    </nav>
 
-    <main>
-        <!-- First link (Three Whiskeys into the Snowstorm) -->
-        <div class="link">
-            <a href="tws.html">Three Whiskeys into the Snowstorm (My Mother's Garden Exhibition)</a>
-        </div>
+        <!-- Project links -->
+        <a href="tws.html">Three Whiskeys into the Snowstorm (My Mother's Garden Exhibition)</a>
+        <a href="work.html">Distraction and Impermanence to Someone Born 7 Years After the Invention of the iPhone</a>
+    </div>
 
-        <!-- Second link (Distraction and Impermanence) -->
-        <div class="link">
-            <a href="work.html">Distraction and Impermanence to Someone Born 7 Years After the Invention of the iPhone</a>
-        </div>
-    </main>
-
-    <footer>
-        <a href="https://www.instagram.com/jonahsaffran/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; height: 24px;">
-        </a>
-        <p>&copy; 2024 Jonah Saffran Studio. All rights reserved.</p>
-    </footer>
 </body>
 </html>
