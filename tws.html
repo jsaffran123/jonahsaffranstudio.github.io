@@ -104,6 +104,47 @@
             display: none; /* Remove footer */
         }
 
+        /* Mobile styling */
+        @media (max-width: 768px) {
+            .slideshow-container {
+                width: 90%; /* Slightly reduce width on mobile */
+                height: auto; /* Adjust height to maintain aspect ratio */
+            }
+
+            .slideshow-container img {
+                max-width: 90%; /* Make images fill more space on smaller screens */
+                margin: 0 10px; /* Reduce margin between images */
+            }
+
+            /* Adjust image sizes for mobile */
+            #image1, #image2 {
+                max-width: 90%; /* Allow these images to fill more space */
+            }
+
+            #image5 {
+                max-width: 800px; /* Make image 5 slightly smaller on mobile */
+            }
+
+            #image11 {
+                max-width: 750px; /* Reduce size of the last image */
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Further adjustments for very small screens */
+            nav a {
+                font-size: 0.9em; /* Make text smaller in the nav for mobile */
+            }
+
+            .slideshow-container {
+                width: 100%; /* Ensure the slideshow takes full width */
+            }
+
+            .slideshow-container img {
+                max-width: 95%; /* Increase image size slightly on very small screens */
+            }
+        }
+
     </style>
 </head>
 <body>

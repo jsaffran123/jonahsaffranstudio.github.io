@@ -52,6 +52,16 @@
             text-align: left;
             line-height: 1.5em;
         }
+        .image-container {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 50%; /* Adjusted for smaller image size */
+            height: auto;
+            border-radius: 8px;
+            pointer-events: none; /* Disable click functionality */
+        }
         footer {
             text-align: center;
             padding: 10px 0;
@@ -82,7 +92,12 @@
     <main>
         <div class="content">
             <p><strong>Contact:</strong> jonahsaffran@gmail.com</p>
-            <p>Jonah Saffran is a practicing artist and student born and raised in Columbia, Missouri based now in the San Francisco area.</p>
+            <p>Jonah Saffran is a practicing artist and student born and raised in Columbia, Missouri, based now in the San Francisco area.</p>
+        </div>
+        
+        <!-- Image Container -->
+        <div class="image-container">
+            <img src="https://live.staticflickr.com/65535/54406069378_7ea6f3c25e_k.jpg" width="2048" height="1536" alt="jonah4website"/>
         </div>
     </main>
     <footer>

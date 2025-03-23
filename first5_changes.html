@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The First 5 Changes</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Navigation bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            background: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            padding: 14px 20px;
+            text-decoration: none;
+            color: black;
+            font-size: 1em;
+            border: none;
+            outline: none;
+        }
+
+        main {
+            margin-top: 60px; /* Adjust to avoid overlap with navigation */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0; /* Remove padding to ensure full-width slideshow */
+            flex-grow: 1;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            width: 100%; /* Make slideshow container take up full width */
+            height: 100vh; /* Adjust height to fill the screen */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            overflow-x: auto; /* Allow horizontal scrolling */
+            overflow-y: hidden; /* Prevent vertical scrolling */
+            box-sizing: border-box;
+            justify-content: flex-start;
+            margin-top: 20px; /* Adjusted margin-top to move the slideshow lower */
+            padding: 0; /* Remove padding around the container */
+        }
+
+        /* Image styles */
+        .slideshow-container img {
+            display: block;
+            max-height: 90vh; /* Slightly smaller height to prevent clipping */
+            width: auto; /* Maintain aspect ratio */
+            object-fit: contain; /* Ensure images are contained within the viewport */
+            border: none; /* Remove any border around images */
+        }
+
+        /* Custom margins for specific images */
+        .slideshow-container img:nth-child(1) {
+            margin-right: 10px; /* Smaller gap between image 1 and 2 */
+        }
+
+        .slideshow-container img:nth-child(2) {
+            margin-right: 30px; /* Larger gap between image 2 and 3 */
+        }
+
+        .slideshow-container img:nth-child(3) {
+            margin-right: 10px; /* Smaller gap between image 3 and 4 */
+        }
+
+        .slideshow-container img:nth-child(8) {
+            margin-right: 30px; /* Larger gap between image 8 and 9 */
+        }
+
+        .slideshow-container img:nth-child(10) {
+            margin-right: 30px; /* Larger gap between image 10 and 11 */
+        }
+
+        .slideshow-container img:nth-child(11) {
+            margin-right: 30px; /* Larger gap between image 11 and 12 */
+        }
+
+        .slideshow-container img:nth-child(14) {
+            margin-right: 30px; /* Larger gap between image 14 and 15 */
+        }
+
+        .slideshow-container img:nth-child(15) {
+            margin-right: 10px; /* Smaller gap between image 15 and 16 */
+        }
+
+        footer {
+            display: none; /* Remove footer */
+        }
+
+        /* Mobile styling */
+        @media (max-width: 768px) {
+            .slideshow-container {
+                width: 90%; /* Slightly reduce width on mobile */
+                height: auto; /* Adjust height to maintain aspect ratio */
+            }
+
+            .slideshow-container img {
+                max-width: 90%; /* Make images fill more space on smaller screens */
+                margin: 0 10px; /* Reduce margin between images */
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Further adjustments for very small screens */
+            nav a {
+                font-size: 0.9em; /* Make text smaller in the nav for mobile */
+            }
+
+            .slideshow-container {
+                width: 100%; /* Ensure the slideshow takes full width */
+            }
+
+            .slideshow-container img {
+                max-width: 95%; /* Increase image size slightly on very small screens */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation bar with Home link -->
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+
+    <main>
+        <!-- Slideshow Container for Images -->
+        <div class="slideshow-container">
+            <img src="https://live.staticflickr.com/65535/54405973795_c3fee44c53_o.jpg" width="3300" height="3300" alt="1"/>
+            <img src="https://live.staticflickr.com/65535/54405836288_5f8fe13296_o.jpg" width="5100" height="3300" alt="2"/>
+            <img src="https://live.staticflickr.com/65535/54405775454_c33da59ebd_o.jpg" width="5100" height="3300" alt="3"/>
+            <img src="https://live.staticflickr.com/65535/54405599161_08335a7dcb_o.jpg" width="5100" height="3300" alt="4"/>
+            <img src="https://live.staticflickr.com/65535/54405969490_0d58dfa165_o.jpg" width="5100" height="3300" alt="5"/>
+            <img src="https://live.staticflickr.com/65535/54405774789_397455cebe_o.jpg" width="5100" height="3300" alt="6"/>
+            <img src="https://live.staticflickr.com/65535/54405969925_3f0ab7c159_o.jpg" width="5100" height="3300" alt="7"/>
+            <img src="https://live.staticflickr.com/65535/54405846668_9696b2d133_o.jpg" width="5100" height="3300" alt="8"/>
+            <img src="https://live.staticflickr.com/65535/54405835143_d6e899e845_o.jpg" width="5100" height="3300" alt="9"/>
+            <img src="https://live.staticflickr.com/65535/54405599806_78682f4a4c_o.jpg" width="5100" height="3300" alt="10"/>
+            <img src="https://live.staticflickr.com/65535/54405969625_f79141c542_o.jpg" width="5100" height="3300" alt="11"/>
+            <img src="https://live.staticflickr.com/65535/54405836248_67e84c207b_o.jpg" width="5100" height="3300" alt="12"/>
+            <img src="https://live.staticflickr.com/65535/54405599591_a423bb10fd_o.jpg" width="5100" height="3300" alt="13"/>
+            <img src="https://live.staticflickr.com/65535/54404719757_47f773b0ee_o.jpg" width="5100" height="3300" alt="14"/>
+            <img src="https://live.staticflickr.com/65535/54405835943_4b52528ac8_o.jpg" width="5100" height="3300" alt="15"/>
+            <img src="https://live.staticflickr.com/65535/54405970250_eaab894930_o.jpg" width="5100" height="3300" alt="16"/>
+            <img src="https://live.staticflickr.com/65535/54405774609_2caa4dae15_o.jpg" width="5100" height="3300" alt="17"/>
+            <img src="https://live.staticflickr.com/65535/54405836148_dfc3c80003_o.jpg" width="5100" height="3300" alt="18"/>
+            <img src="https://live.staticflickr.com/65535/54404720422_ab4e78026c_o.jpg" width="5100" height="3300" alt="19"/>
+        </div>
+    </main>
+
+</body>
+</html>
