@@ -1,111 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonah Saffran Studio</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Times New Roman', Times, serif;
-            display: flex;
-            height: 100vh;
-            overflow: hidden;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jonah Saffran Studio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', Times, serif;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-        .left {
-            flex: 0 1 50%;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            transition: background-image 0.5s ease-in-out;
-        }
+    .menu {
+      flex: 0 0 35%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: white;
+      padding: 40px;
+    }
 
-        .right {
-            flex: 0 1 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: white;
-            padding: 20px;
-            overflow-y: auto;
-        }
+    .menu a {
+      font-size: 0.8em;
+      color: black;
+      text-decoration: none;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
 
-        .right a {
-            font-size: 0.8em;
-            color: black;
-            text-decoration: none;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
+    .menu a:hover {
+      text-decoration: none;
+    }
 
-        .right a:hover {
-            text-decoration: none;
-        }
+    .image-container {
+      flex: 0 0 65%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: white;
+      padding-left: 0;
+      padding-right: 20px;
+      box-sizing: border-box;
+      position: relative;
+      overflow: visible;
+    }
 
-        @media (max-width: 768px) {
-            body {
-                flex-direction: column;
-            }
+    .image-container img {
+      width: 100%;
+      max-width: 1400px;
+      height: auto;
+      display: block;
+      margin: 0;
+      position: relative;
+      transform: translateX(-20%);
+    }
 
-            .left {
-                flex: 0 1 100%;
-                height: 50vh;
-            }
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
 
-            .right {
-                flex: 0 1 100%;
-                height: 50vh;
-                justify-content: center;
-                align-items: center;
-            }
+      .menu, .image-container {
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
 
-            .right a {
-                font-size: 1.2em;
-                margin-bottom: 15px;
-            }
-        }
-    </style>
-    <!-- Preload smaller images -->
-    <link rel="preload" href="https://live.staticflickr.com/65535/54170640503_eca8a67181_k.jpg" as="image">
-    <link rel="preload" href="https://live.staticflickr.com/65535/54170371271_f17821c8eb_o.jpg?width=1920" as="image">
-    <link rel="preload" href="https://live.staticflickr.com/65535/54405934738_a7f7f9a003_o.jpg?width=1920" as="image">
-    <link rel="preload" href="https://live.staticflickr.com/65535/54405695131_3217c9cdb8_o.jpg?width=1920" as="image">
-    <link rel="preload" href="https://live.staticflickr.com/65535/54405865334_22e584fe5c_o.jpg?width=1920" as="image">
-    <link rel="preload" href="https://live.staticflickr.com/65535/54404829707_9af9880a41_o.jpg?width=1920" as="image">
+      .menu a {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+      }
+
+      .image-container img {
+        width: 95%;
+        max-width: none;
+        transform: none;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="left" id="left-image"></div>
+  <div class="menu">
+    <a href="jonah.html">Jonah</a>
+    <a href="first5.html">Undergraduate Thesis Work</a>
+  </div>
 
-    <div class="right">
-        <a href="jonah.html">Jonah</a>
-        <a href="first5.html">Undergraduate Thesis Work</a>
-    </div>
-
-    <script>
-        const images = [
-            'https://live.staticflickr.com/65535/54170640503_eca8a67181_k.jpg',
-            'https://live.staticflickr.com/65535/54170371271_f17821c8eb_o.jpg?width=1920',
-            'https://live.staticflickr.com/65535/54405934738_a7f7f9a003_o.jpg?width=1920',
-            'https://live.staticflickr.com/65535/54405695131_3217c9cdb8_o.jpg?width=1920',
-            'https://live.staticflickr.com/65535/54405865334_22e584fe5c_o.jpg?width=1920',
-            'https://live.staticflickr.com/65535/54404829707_9af9880a41_o.jpg?width=1920'
-        ];
-
-        // Function to randomly select an image
-        const getRandomImage = () => {
-            const randomImage = images[Math.floor(Math.random() * images.length)];
-            // Cache-busting: Add a timestamp to prevent image caching
-            return `${randomImage}&${new Date().getTime()}`;
-        };
-
-        // Set the random image as the background for the left container
-        document.getElementById('left-image').style.backgroundImage = `url(${getRandomImage()})`;
-    </script>
+  <div class="image-container">
+    <img src="https://live.staticflickr.com/65535/54563804605_25923a7368_o.jpg" alt="Fence by Jonah Saffran" />
+  </div>
 
 </body>
 </html>
