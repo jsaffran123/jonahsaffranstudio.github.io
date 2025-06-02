@@ -62,13 +62,22 @@
     @media (max-width: 768px) {
       body {
         flex-direction: column;
+        height: auto;
+        overflow: visible;
       }
 
       .menu, .image-container {
-        flex: 1;
+        flex: none;
+        width: 100%;
         justify-content: center;
         align-items: center;
-        padding: 20px;
+        padding: 30px 20px;
+        box-sizing: border-box;
+      }
+
+      .menu {
+        align-items: center;
+        padding-bottom: 0;
       }
 
       .menu a {
@@ -77,7 +86,7 @@
       }
 
       .image-container img {
-        width: 95%;
+        width: 90%;
         max-width: none;
         transform: none;
       }
