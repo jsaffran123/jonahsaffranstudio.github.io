@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Three Whiskeys into the Snowstorm</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      color: black;
+      font-family: 'Times New Roman', Times, serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      background: white;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      padding: 14px 20px;
+      text-decoration: none;
+      color: black;
+      font-size: 1em;
+    }
+
+    main {
+      margin-top: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-grow: 1;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .slideshow-container {
+      width: 100%;
+      height: 85vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      overflow-x: auto;
+      overflow-y: hidden;
+      box-sizing: border-box;
+      justify-content: flex-start;
+      margin-top: 20px;
+      padding: 0 60px;
+      scroll-behavior: smooth;
+    }
+
+    /* Base style for images */
+    .slideshow-container img {
+      display: block;
+      object-fit: contain;
+      flex-shrink: 0;
+      border: none;
+    }
+
+    /* Horizontal images sized by width, with large horizontal margin */
+    .slideshow-container img:not(.vertical):not(.large-final) {
+      width: 80vh;
+      height: auto;
+      margin-left: 140px;
+      margin-right: 140px;
+    }
+
+    /* Vertical images sized by height, with large horizontal margin */
+    .slideshow-container img.vertical {
+      height: 80vh;
+      width: auto;
+      margin-left: 140px;
+      margin-right: 140px;
+    }
+
+    /* Last image very large, with normal spacing */
+    .slideshow-container img.large-final {
+      width: 260vh;
+      height: auto;
+      margin-left: 140px;
+      margin-right: 60px; /* smaller right margin */
+    }
+
+    /* Remove left margin from first image */
+    .slideshow-container img:first-child {
+      margin-left: 60px;
+    }
+
+    footer {
+      display: none;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .slideshow-container {
+        height: auto;
+        padding: 0 30px;
+      }
+
+      .slideshow-container img:not(.vertical):not(.large-final) {
+        width: 60vh;
+        margin-left: 90px;
+        margin-right: 90px;
+      }
+
+      .slideshow-container img.vertical {
+        height: 60vh;
+        margin-left: 90px;
+        margin-right: 90px;
+      }
+
+      .slideshow-container img.large-final {
+        width: 180vh;
+        margin-left: 90px;
+        margin-right: 40px;
+      }
+
+      .slideshow-container img:first-child {
+        margin-left: 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav a {
+        font-size: 0.9em;
+      }
+
+      .slideshow-container img:not(.vertical):not(.large-final) {
+        width: 50vh;
+        margin-left: 60px;
+        margin-right: 60px;
+      }
+
+      .slideshow-container img.vertical {
+        height: 50vh;
+        margin-left: 60px;
+        margin-right: 60px;
+      }
+
+      .slideshow-container img.large-final {
+        width: 120vh;
+        margin-left: 60px;
+        margin-right: 30px;
+      }
+
+      .slideshow-container img:first-child {
+        margin-left: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+  </nav>
+
+  <main>
+    <div class="slideshow-container">
+      <img src="https://live.staticflickr.com/65535/54565387862_bda135837b_o.jpg" alt="new"/> <!-- horizontal -->
+      <img class="vertical" src="https://live.staticflickr.com/65535/54565387852_86a236e5c5_o.jpg" alt="new-10"/> <!-- vertical -->
+      <img class="vertical" src="https://live.staticflickr.com/65535/54566264646_a176fedf45_o.jpg" alt="new-11"/> <!-- vertical -->
+      <img src="https://live.staticflickr.com/65535/54566593065_21293800e0_o.jpg" alt="new-5"/> <!-- horizontal -->
+      <img src="https://live.staticflickr.com/65535/54565388137_3e4540f300_o.jpg" alt="new-4"/> <!-- horizontal -->
+      <img class="vertical" src="https://live.staticflickr.com/65535/54566444554_ae85d2c9c7_o.jpg" alt="new-8"/> <!-- vertical -->
+      <img src="https://live.staticflickr.com/65535/54566264936_6e019c7648_o.jpg" alt="new-3"/> <!-- horizontal -->
+      <img src="https://live.staticflickr.com/65535/54566444924_4f19dac42c_o.jpg" alt="new-2"/> <!-- horizontal -->
+      <img class="vertical" src="https://live.staticflickr.com/65535/54566265221_7ae2972e79_o.jpg" alt="new-7"/> <!-- vertical -->
+      <img class="large-final" src="https://live.staticflickr.com/65535/54563804605_25923a7368_o.jpg" alt="FENCE"/> <!-- MUCH LARGER -->
+    </div>
+  </main>
+</body>
+</html>
